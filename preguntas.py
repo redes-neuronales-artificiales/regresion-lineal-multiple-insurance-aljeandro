@@ -21,7 +21,7 @@ def pregunta_01():
     df = pd.read_csv("insurance.csv")
 
     # Asigne la columna `charges` a la variable `y`.
-    y = df[['charges']].values
+    y = df['charges'].values
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy(deep=True)
