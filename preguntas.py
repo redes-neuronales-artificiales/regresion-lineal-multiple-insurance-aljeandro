@@ -79,8 +79,6 @@ def pregunta_03():
     from sklearn.pipeline import Pipeline
     from sklearn.preprocessing import OneHotEncoder
 
-
-
     pipeline = Pipeline(
         steps=[
             # Paso 1: Construya un column_transformer que aplica OneHotEncoder a las
@@ -91,7 +89,7 @@ def pregunta_03():
                 make_column_transformer(
                     (
                         OneHotEncoder(),
-                        make_column_selector(dtype_include='category'),
+                        make_column_selector(dtype_include='object'),
                     ),
                     remainder='passthrough',
                 ),
